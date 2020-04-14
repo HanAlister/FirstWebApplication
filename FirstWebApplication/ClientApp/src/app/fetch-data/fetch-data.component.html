@@ -7,18 +7,26 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
   <thead>
     <tr>
-      <th>Date</th>
+      <th>Data</th>
       <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
+      <th>Ciśnienie</th>
+      <th>Wilgotność</th>
+      <th>Zachmurzenie</th>
+      <th>Deszcz (mm)</th>
+      <th>Śnieg (mm)</th>
+      <th>Pogoda ogólnie</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let forecast of forecasts">
       <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
+      <td>{{ forecast.temp }}</td>
+      <td>{{ forecast.pressure }}</td>
+      <td>{{ forecast.humidity }}%</td>
+      <td>{{ forecast.clouds }}%</td>
+      <td>{{ forecast.rain }}</td>
+      <td>{{ forecast.snow }}</td>
+      <td>{{ forecast.description }}</td>
     </tr>
   </tbody>
 </table>
